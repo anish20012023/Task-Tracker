@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Header from './Components/Header/Header';
+import CreateTask from './Components/CreateTask/CreateTask';
+import ShowTask from './Components/ShowTask/ShowTask';
+import { IoIosAddCircle } from 'react-icons/io';
+import { AiFillMinusCircle } from 'react-icons/ai';
 
 function App() {
+  const [isopen, setIsOpen] = useState<boolean>(false);
+  function handleOpen(val: boolean) {
+    setIsOpen(val);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Container">
+      <Header />
+      {isopen ? (
+        <div className="createTask-overlay">
+          <CreateTask handleOpen={handleOpen} />
+        </div>
+      ) : undefined}
+      <ShowTask />
+      <button className="plus-min-icon" onClick={() => setIsOpen(!isopen)}>
+        {!isopen ? <IoIosAddCircle className="addIcon" /> : <AiFillMinusCircle className="minusIcon" />}
+      </button>
     </div>
   );
 }

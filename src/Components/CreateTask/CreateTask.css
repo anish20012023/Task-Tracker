@@ -1,0 +1,104 @@
+.newtask-container {
+  text-align: center;
+}
+.newtask-container h3{
+  padding: 10px 0;
+  font-size: 22px;
+}
+.newtask form {
+  margin: 0 auto;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  width: 50%;
+}
+.newtask-logo {
+  width: 60px;
+  height: 60px;
+  filter: drop-shadow(8px 5px 5px #000000);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(7px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.newtask-descp {
+  resize: none;
+}
+.newtask-btn {
+  height: 45px;
+  cursor: pointer;
+  background-color: rgb(89, 212, 155);
+  border-style: none;
+}
+.newtask-btn:hover {
+  background-color: rgb(8, 212, 117);
+}
+.edit-task,
+.newtask-form {
+  width: 350px;
+  height: 250px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  transform: scale(0);
+  animation: editAnim 0.2s forwards;
+  gap: 10px;
+}
+.edit-title,
+.newtask-title {
+  background-color: white;
+  color: black;
+  height: 50px;
+  border-style: none;
+}
+.edit-descp,
+.newtask-descp {
+  background-color: white;
+  color: black;
+  height: 100%;
+  overflow-y: scroll;
+}
+.edit-btn-div {
+  display: flex;
+  gap: 10px;
+}
+.edit-saveBtn {
+  background: white;
+  width: max-content;
+  padding: 3px 10px;
+  border-radius: 3px;
+  color: rgb(0, 0, 0);
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@keyframes editAnim {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+input[type='text'],
+textarea {
+  padding:0 10px;
+  font-size: 15px;
+  padding-top: 5px;
+}
+input[type='text'],
+textarea:focus {
+  outline: none;
+}

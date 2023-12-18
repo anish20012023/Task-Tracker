@@ -1,0 +1,107 @@
+.empty-container {
+  text-align: center;
+  margin-top: 100px;
+}
+.empty-container img {
+  width: 250px;
+  height: 250px;
+  opacity: 0.2;
+}
+
+
+.task-Container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 0;
+
+}
+.task {
+  width: 350px;
+  height: 250px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  box-shadow: 1px 2px 5px black;
+  transition: all .4s;
+}
+.task:hover{
+  transform: scale(1.02);
+}
+.title {
+  background-color: white;
+  color: rgb(63, 63, 63);
+  height: 50px;
+  text-transform: capitalize;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.descp {
+  background-color: white;
+  color: rgb(93, 92, 92);
+  height: 100%;
+  overflow-y: scroll;
+  padding: 0 10px;
+  padding-top: 5px;
+}
+.time-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.time-btn span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.time-btn span p {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.time-btn span button {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+.showtask-container {
+  margin-top: 30px;
+}
+.navbtn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.navbtn button {
+  padding: 7px 0;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.task-btn {
+  display: flex;
+  gap: 10px;
+}
+.task-btn button {
+  padding: 4px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.nav-btn.all{
+  background-color: rgb(240, 129, 74);
+}
+.nav-btn.fav{
+  background-color: rgb(235, 243, 134);
+}
+
+

@@ -1,0 +1,13 @@
+.header{
+text-align: center;
+margin-bottom: 5px;
+}
+.header img{
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+    filter: drop-shadow(8px 5px 5px #000000);
+}
+.header h2{
+    margin-top: 10px;
+}
